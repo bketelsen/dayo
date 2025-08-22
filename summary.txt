@@ -1,0 +1,2132 @@
+IMAGE: tools
+
+    CONFIG:
+                           Profiles: misc
+                                     package-manager
+                                     runtime
+                       Dependencies: none
+                    Minimum Version: none
+                  Configure Scripts: none
+                   Pass Environment: none
+
+    DISTRIBUTION:
+                       Distribution: debian
+                            Release: trixie
+                       Architecture: x86-64
+                             Mirror: default
+               Local Mirror (build): none
+           Repo Signature/Key check: no
+              Fetch Repository Keys: no
+                       Repositories: none
+
+    OUTPUT:
+                      Output Format: directory
+                   Manifest Formats: (none)
+                             Output: mkosi.tools
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: no
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: ?exact-name(distribution-gpg-keys)
+                                     ?exact-name(grub-pc-bin)
+                                     ?exact-name(kali-archive-keyring)
+                                     acl
+                                     apt
+                                     apt-utils
+                                     archlinux-keyring
+                                     attr
+                                     bash
+                                     btrfs-progs
+                                     ca-certificates
+                                     coreutils
+                                     cpio
+                                     createrepo-c
+                                     curl
+                                     debian-archive-keyring
+                                     debian-archive-keyring
+                                     diffutils
+                                     dnf
+                                     dosfstools
+                                     e2fsprogs
+                                     erofs-utils
+                                     file
+                                     findutils
+                                     gawk
+                                     git-core
+                                     grep
+                                     grub-common
+                                     jq
+                                     keyutils
+                                     kmod
+                                     less
+                                     libcryptsetup12
+                                     libnss-myhostname
+                                     libnss-resolve
+                                     libseccomp2
+                                     libtss2-dev
+                                     makepkg
+                                     man
+                                     manpages
+                                     mtools
+                                     nano
+                                     opensc
+                                     openssh-client
+                                     openssl
+                                     ovmf
+                                     pacman-package-manager
+                                     pkcs11-provider
+                                     policycoreutils
+                                     python3-pefile
+                                     python3-virt-firmware
+                                     qemu-efi-aarch64
+                                     qemu-system
+                                     sbsigntool
+                                     sed
+                                     socat
+                                     squashfs-tools
+                                     strace
+                                     swtpm
+                                     swtpm-tools
+                                     systemd
+                                     systemd-boot-tools
+                                     systemd-container
+                                     systemd-coredump
+                                     systemd-journal-remote
+                                     systemd-repart
+                                     systemd-ukify
+                                     tar
+                                     ubuntu-keyring
+                                     uidmap
+                                     virtiofsd
+                                     which
+                                     xfsprogs
+                                     xz-utils
+                                     zstd
+                                     zypper
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: none
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: /tmp/tmp1ssiwduy/resources/mkosi-tools/mkosi.prepare
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: auto
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+IMAGE: base
+
+    OUTPUT:
+                      Output Format: directory
+                   Manifest Formats: (none)
+                             Output: base
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: no
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: 7zip
+                                     acl
+                                     amd64-microcode
+                                     apt
+                                     attr
+                                     bash
+                                     bash-completion
+                                     binutils
+                                     btrfs-progs
+                                     coreutils
+                                     cpio
+                                     curl
+                                     dbus-broker
+                                     dialog
+                                     diffutils
+                                     dosfstools
+                                     dpkg
+                                     dracut
+                                     e2fsprogs
+                                     erofs-utils
+                                     fdisk
+                                     file
+                                     findutils
+                                     firmware-ath9k-htc
+                                     firmware-carl9170
+                                     firmware-intel-graphics
+                                     firmware-intel-misc
+                                     firmware-linux
+                                     firmware-mediatek
+                                     firmware-nvidia-graphics
+                                     firmware-nvidia-gsp
+                                     fuse3
+                                     gdisk
+                                     git-core
+                                     grep
+                                     gzip
+                                     intel-microcode
+                                     iproute2
+                                     iputils-ping
+                                     jq
+                                     kbd
+                                     keyboard-configuration
+                                     kmod
+                                     less
+                                     libnss-resolve
+                                     linux-image-generic
+                                     live-task-non-free-firmware-pc
+                                     live-task-non-free-firmware-server
+                                     locales
+                                     login
+                                     lz4
+                                     man-db
+                                     manpages
+                                     nano
+                                     nftables
+                                     openssh-client
+                                     openssh-server
+                                     openssl
+                                     passt
+                                     passwd
+                                     pciutils
+                                     pipx
+                                     pkexec
+                                     podman
+                                     podman-compose
+                                     podman-docker
+                                     polkitd
+                                     procps
+                                     python-is-python3
+                                     python3-minimal
+                                     python3-pip
+                                     sed
+                                     strace
+                                     sudo
+                                     systemd
+                                     systemd-boot
+                                     systemd-boot-efi
+                                     systemd-container
+                                     systemd-cron
+                                     systemd-homed
+                                     systemd-repart
+                                     systemd-resolved
+                                     systemd-sysv
+                                     systemd-timesyncd
+                                     systemd-userdbd
+                                     systemd-zram-generator
+                                     tar
+                                     tree
+                                     tzdata
+                                     udev
+                                     util-linux
+                                     util-linux-extra
+                                     vim-tiny
+                                     wget
+                                     whiptail
+                                     wireless-regdb
+                                     xz-utils
+                                     zsh
+                                     zsh-autosuggestions
+                                     zsh-syntax-highlighting
+                                     zstd
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: none
+                     Skeleton Trees: /home/bjk/dayo/mkosi.images/base/mkosi.skeleton
+                        Extra Trees: /home/bjk/dayo/mkosi.images/base/mkosi.extra
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+IMAGE: .dep-libvirt
+
+    OUTPUT:
+                      Output Format: directory
+                   Manifest Formats: (none)
+                             Output: .dep-libvirt
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: libvirt-clients
+                                     libvirt-daemon
+                                     libvirt-daemon-lock
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+IMAGE: confext-apt-file
+
+    OUTPUT:
+                      Output Format: confext
+                   Manifest Formats: (none)
+                             Output: confext-apt-file.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: apt-file
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: confext-incus
+
+    OUTPUT:
+                      Output Format: confext
+                   Manifest Formats: (none)
+                             Output: confext-incus.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: dnsmasq-base
+                                     incus
+                                     incus-agent
+                                     ovmf
+                                     qemu-kvm
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: confext-qemu-agent
+
+    OUTPUT:
+                      Output Format: confext
+                   Manifest Formats: (none)
+                             Output: confext-qemu-agent.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: qemu-guest-agent
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: confext-vmware
+
+    OUTPUT:
+                      Output Format: confext
+                   Manifest Formats: (none)
+                             Output: confext-vmware.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: open-vm-tools
+                                     open-vm-tools-desktop
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: sysext-gnome-connections
+
+    OUTPUT:
+                      Output Format: sysext
+                   Manifest Formats: (none)
+                             Output: sysext-gnome-connections.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: gnome-connections
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: sysext-mkosi-tools
+
+    OUTPUT:
+                      Output Format: sysext
+                   Manifest Formats: (none)
+                             Output: sysext-mkosi-tools.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: createrepo-c
+                                     distribution-gpg-keys
+                                     dnf
+                                     grub-common
+                                     makepkg
+                                     mtools
+                                     pacman-package-manager
+                                     reprepro
+                                     rpm
+                                     zypper
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: sysext-ncat
+
+    OUTPUT:
+                      Output Format: sysext
+                   Manifest Formats: (none)
+                             Output: sysext-ncat.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: ncat
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: confext-libvirt
+
+    OUTPUT:
+                      Output Format: confext
+                   Manifest Formats: (none)
+                             Output: confext-libvirt.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: none
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: /home/bjk/dayo/mkosi.output/.dep-libvirt
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: sysext-apt-file
+
+    OUTPUT:
+                      Output Format: sysext
+                   Manifest Formats: (none)
+                             Output: sysext-apt-file.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: apt-file
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: sysext-incus
+
+    OUTPUT:
+                      Output Format: sysext
+                   Manifest Formats: (none)
+                             Output: sysext-incus.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: dnsmasq-base
+                                     incus
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: sysext-qemu-agent
+
+    OUTPUT:
+                      Output Format: sysext
+                   Manifest Formats: (none)
+                             Output: sysext-qemu-agent.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: qemu-guest-agent
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: sysext-vmware
+
+    OUTPUT:
+                      Output Format: sysext
+                   Manifest Formats: (none)
+                             Output: sysext-vmware.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: open-vm-tools
+                                     open-vm-tools-desktop
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: sysext-libvirt
+
+    OUTPUT:
+                      Output Format: sysext
+                   Manifest Formats: (none)
+                             Output: sysext-libvirt.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: none
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: /home/bjk/dayo/mkosi.output/.dep-libvirt
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: sysext-gnome-boxes
+
+    OUTPUT:
+                      Output Format: sysext
+                   Manifest Formats: (none)
+                             Output: sysext-gnome-boxes.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: none
+                        Sector Size: default
+                            Overlay: yes
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: none
+
+    CONTENT:
+                           Packages: gnome-boxes
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                                     /home/bjk/dayo/mkosi.output/.dep-libvirt
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: auto
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: none
+                   Finalize Scripts: none
+                 Postoutput Scripts: none
+
+                           Bootable: disabled
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: auto
+        Unified Kernel Image Format: None
+      Unified Kernel Image Profiles: none
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: none
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: none
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: default
+                    Locale Messages: default
+                             Keymap: default
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (default)
+                         Root Shell: default
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: yes
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: auto
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+IMAGE: main
+
+    CONFIG:
+                           Profiles: none
+                       Dependencies: .dep-libvirt
+                                     base
+                                     confext-apt-file
+                                     confext-incus
+                                     confext-libvirt
+                                     confext-qemu-agent
+                                     confext-vmware
+                                     sysext-apt-file
+                                     sysext-gnome-boxes
+                                     sysext-gnome-connections
+                                     sysext-incus
+                                     sysext-libvirt
+                                     sysext-mkosi-tools
+                                     sysext-ncat
+                                     sysext-qemu-agent
+                                     sysext-vmware
+                    Minimum Version: none
+                  Configure Scripts: none
+                   Pass Environment: none
+
+    DISTRIBUTION:
+                       Distribution: debian
+                            Release: trixie
+                       Architecture: x86-64
+                             Mirror: default
+               Local Mirror (build): none
+           Repo Signature/Key check: no
+              Fetch Repository Keys: no
+                       Repositories: main
+                                     contrib
+                                     non-free
+                                     non-free-firmware
+                                     main
+                                     contrib
+                                     non-free
+                                     non-free-firmware
+
+    OUTPUT:
+                      Output Format: disk
+                   Manifest Formats: (none)
+                             Output: DayoServer.raw
+                        Compression: none
+                  Compression Level: 3
+                   Output Directory: /home/bjk/dayo/mkosi.output
+                        Output Mode: default
+                           Image ID: None
+                      Image Version: None
+                    Split Artifacts: uki
+                                     kernel
+                                     initrd
+                 Repart Directories: /home/bjk/dayo/mkosi.repart
+                        Sector Size: default
+                            Overlay: no
+                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                      Clean Scripts: /home/bjk/dayo/mkosi.clean
+
+    CONTENT:
+                           Packages: none
+                     Build Packages: none
+                  Volatile Packages: none
+                Package Directories: none
+       Volatile Package Directories: none
+                 With Documentation: yes
+
+                         Base Trees: /home/bjk/dayo/mkosi.output/base
+                     Skeleton Trees: none
+                        Extra Trees: none
+
+                    Remove Packages: none
+                       Remove Files: none
+     Clean Package Manager Metadata: disabled
+                  Source Date Epoch: none
+
+                       Sync Scripts: none
+                    Prepare Scripts: none
+                      Build Scripts: none
+                Postinstall Scripts: /home/bjk/dayo/mkosi.postinst.chroot
+                   Finalize Scripts: /home/bjk/dayo/mkosi.finalize.chroot
+                 Postoutput Scripts: none
+
+                           Bootable: auto
+                         Bootloader: systemd-boot
+                    BIOS Bootloader: none
+                    Shim Bootloader: none
+              Unified Kernel Images: unsigned
+        Unified Kernel Image Format: _
+      Unified Kernel Image Profiles: UKIProfile(profile={'ID': 'live', 'TITLE': 'Live System'}, cmdline=['root=tmpfs', 'rd.systemd.mask=systemd-repart.service', 'systemd.mask=systemd-repart.service', 'systemd.firstboot=no', 'systemd.set-credential=agetty.autologin:root', 'systemd.set-credential=login.noauth:yes', 'systemd.journald.forward_to_console=1', 'systemd.journald.max_level_console=warning', 'SYSTEMD_SULOGIN_FORCE=1'], sign_expected_pcr=True)
+                            Initrds: none
+                    Initrd Profiles: none
+                    Initrd Packages: none
+           Initrd Volatile Packages: none
+                         Devicetree: none
+                             Splash: none
+                Kernel Command Line: rw
+                                     mount.usr=PARTLABEL=_
+                                     logo.nologo
+                                     security=none
+                                     audit=0
+                                     mitigations=off
+                     Kernel Modules: none
+        Kernel Modules Include Host: no
+                     Firmware Files: none
+              Kernel Modules Initrd: yes
+              Kernel Initrd Modules: default
+                                     ata/
+                                     scsi/
+                                     nvme/
+                                     usb/
+                                     mmc/
+                                     firewire/
+                                     gpio/
+                                     virtio/
+                                     md/
+                                     mtd/
+                                     block/
+                                     input/
+                                     hid/
+ Kernel Modules Initrd Include Host: no
+
+                             Locale: en_US.UTF-8
+                    Locale Messages: default
+                             Keymap: us
+                           Timezone: default
+                           Hostname: default
+                      Root Password: (set)
+                         Root Shell: /bin/bash
+                         Machine ID: none
+
+                          Autologin: no
+                        Make Initrd: no
+                                SSH: auto
+                    SELinux Relabel: auto
+
+         VALIDATION:
+                    UEFI SecureBoot: no
+         UEFI SecureBoot AutoEnroll: no
+             SecureBoot Signing Key: none
+      SecureBoot Signing Key Source: file
+             SecureBoot Certificate: none
+      SecureBoot Certificate Source: file
+               SecureBoot Sign Tool: auto
+                             Verity: auto
+                 Verity Signing Key: none
+          Verity Signing Key Source: file
+                 Verity Certificate: none
+          Verity Certificate Source: file
+                 Sign Expected PCRs: disabled
+          Expected PCRs Signing Key: none
+           Expected PCRs Key Source: file
+          Expected PCRs Certificate: none
+   Expected PCRs Certificate Source: file
+                         Passphrase: none
+                           Checksum: no
+                               Sign: no
+                       OpenPGP Tool: gpg
+                            GPG Key: (default)
+
+    BUILD CONFIGURATION:
+                         Tools Tree: /home/bjk/dayo/mkosi.tools
+            Tools Tree Certificates: yes
+
+                 Extra Search Paths: none
+                        Incremental: yes
+             Use Only Package Cache: auto
+                      Sandbox Trees: none
+                Workspace Directory: /home/bjk/.cache/mkosi
+                    Cache Directory: /home/bjk/dayo/mkosi.cache
+                          Cache Key: &d~&r~&a~&I
+            Package Cache Directory: default
+                    Build Directory: none
+                          Build Key: &d~&r~&a
+                     Use Subvolumes: auto
+                     Repart Offline: yes
+                       Save History: yes
+                      Build Sources: /home/bjk/dayo
+            Build Sources Ephemeral: no
+                 Script Environment: none
+                  Environment Files: none
+         Run Tests in Build Scripts: yes
+               Scripts With Network: no
+
+                          Proxy URL: none
+             Proxy Peer Certificate: /etc/ssl/certs/ca-certificates.crt
+           Proxy Client Certificate: none
+                   Proxy Client Key: none
+
+    HOST CONFIGURATION:
+                    NSpawn Settings: none
+                          Ephemeral: True
+                        Credentials: home.create.particle
+          Extra Kernel Command Line: none
+                      Runtime Trees: none
+                       Runtime Size: 30.0G
+                    Runtime Scratch: disabled
+                    Runtime Network: user
+              Runtime Build Sources: False
+  Runtime Home or Working Directory: no
+                    Unit Properties: none
+                    SSH Signing Key: none
+                    SSH Certificate: none
+                            Machine: main
+                    Forward Journal: none
+       Register guest with machined: auto
+                Storage Target Mode: auto
+
+            Virtual Machine Monitor: qemu
+                            Console: native
+                          CPU Cores: 4
+                                RAM: 4.0G
+                                KVM: auto
+                              VSock: auto
+                VSock Connection ID: auto
+                                TPM: disabled
+                             CD-ROM: no
+                           Firmware: auto
+                 Firmware Variables: none
+                              Linux: none
+               QEMU Extra Arguments: -full-screen
+
