@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: setup-mkosi
         uses: systemd/mkosi@da814d96341828ba573821577e2b973cdc16f91f
+      - name: checkout repo
+        uses: actions/checkout@main
       - name: version
         run: |
           mkosi --version
