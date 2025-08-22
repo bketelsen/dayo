@@ -1,5 +1,5 @@
 .PHONY: default
-default: build
+default: server
 
 .PHONY: server
 server:
