@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup-mkosi
+        uses: systemd/mkosi@v25.3
+      - name: build
+        run: |
+          mkosi build --force
