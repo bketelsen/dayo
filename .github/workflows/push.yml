@@ -13,4 +13,4 @@ jobs:
         uses: systemd/mkosi@v25.3
       - name: build
         run: |
-          mkosi build --force
+          mkosi build -d debian -r trixie --force
