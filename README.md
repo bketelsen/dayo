@@ -17,7 +17,6 @@ Sysext apps:
 - `sysext-incus`: Incus system container and VM manager, plus qemu.
 - `sysext-podman`: Podman container tool and `podman-docker` symlink.
 - `sysext-vmware`: VMWare tools.
-- `sysext-breeze`: KDE Breeze dependencies.
 - `sysext-kate`: Kate editor.
 - `sysext-ncat`: Netcat.
 - `sysext-virt-viewer`: Virt viewer tool.
