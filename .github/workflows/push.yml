@@ -19,7 +19,7 @@ jobs:
           mkosi -d debian -r trixie summary --no-pager
       - name: build server
         run: |
-          mkosi -d debian -r trixie build
+          make server
       - name: build desktop
         run: |
-          mkosi -d debian -r trixie --profile desktop build
+          make desktop

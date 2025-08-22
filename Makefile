@@ -2,20 +2,20 @@
 default: build
 
 .PHONY: build
-build:
+server:
 ifeq (, $(shell which mkosi))
 	@echo "mkosi couldn't be found, please install it and try again"
 	exit 1
 endif
-	$(shell command -v mkosi) build
+	$(shell command -v mkosi) -d debian -r trixie build
 
 .PHONY: desktop
-build:
+desktop:
 ifeq (, $(shell which mkosi))
 	@echo "mkosi couldn't be found, please install it and try again"
 	exit 1
 endif
-	$(shell command -v mkosi) --profile desktop build
+	$(shell command -v mkosi) -d debian -r trixie --profile desktop build
 
 .PHONY: clean
 clean:
