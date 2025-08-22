@@ -1,7 +1,7 @@
 .PHONY: default
 default: build
 
-.PHONY: build
+.PHONY: server
 server:
 ifeq (, $(shell which mkosi))
 	@echo "mkosi couldn't be found, please install it and try again"

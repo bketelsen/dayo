@@ -35,7 +35,7 @@ IMAGE: tools
                  Repart Directories: none
                         Sector Size: default
                             Overlay: no
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -131,7 +131,7 @@ IMAGE: tools
                   Source Date Epoch: none
 
                        Sync Scripts: none
-                    Prepare Scripts: /tmp/tmp1ssiwduy/resources/mkosi-tools/mkosi.prepare
+                    Prepare Scripts: /tmp/tmp52cy_dne/resources/mkosi-tools/mkosi.prepare
                       Build Scripts: none
                 Postinstall Scripts: none
                    Finalize Scripts: none
@@ -190,7 +190,7 @@ IMAGE: base
                  Repart Directories: none
                         Sector Size: default
                             Overlay: no
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -370,7 +370,7 @@ IMAGE: .dep-libvirt
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -452,7 +452,7 @@ IMAGE: confext-apt-file
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -556,7 +556,7 @@ IMAGE: confext-incus
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -664,7 +664,7 @@ IMAGE: confext-qemu-agent
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -768,7 +768,7 @@ IMAGE: confext-vmware
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -873,7 +873,7 @@ IMAGE: sysext-gnome-connections
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -977,7 +977,7 @@ IMAGE: sysext-mkosi-tools
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -1090,7 +1090,7 @@ IMAGE: sysext-ncat
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -1194,7 +1194,7 @@ IMAGE: confext-libvirt
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -1298,7 +1298,7 @@ IMAGE: sysext-apt-file
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -1402,7 +1402,7 @@ IMAGE: sysext-incus
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -1507,7 +1507,7 @@ IMAGE: sysext-qemu-agent
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -1611,7 +1611,7 @@ IMAGE: sysext-vmware
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -1716,7 +1716,7 @@ IMAGE: sysext-libvirt
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -1820,7 +1820,7 @@ IMAGE: sysext-gnome-boxes
                  Repart Directories: none
                         Sector Size: default
                             Overlay: yes
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: none
 
     CONTENT:
@@ -1964,7 +1964,7 @@ IMAGE: main
                  Repart Directories: /home/bjk/dayo/mkosi.repart
                         Sector Size: default
                             Overlay: no
-                               Seed: eb30495c-8b8e-4328-837d-0179e50d6636
+                               Seed: f0a666c7-588a-47ca-98c9-06b80e12b79e
                       Clean Scripts: /home/bjk/dayo/mkosi.clean
 
     CONTENT:
