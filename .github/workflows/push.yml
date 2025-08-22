@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setup-mkosi
-        uses: systemd/mkosi@v25.3
+        uses: systemd/mkosi@main
       - name: build
         run: |
           mkosi -d debian -r trixie build
