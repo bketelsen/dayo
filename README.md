@@ -1,6 +1,8 @@
 # Dayo - experimental
 A system built with mkosi for my own usage.
 
+This is a hard fork of ["not-so-immutable-os"](https://github.com/MoltenArmor/not-so-immutable-os), with a focus on providing a server image and a desktop image.
+
 This system is based on Debian, using as many systemd components as we can. Basically it is based on the idea of [immutable `/usr`](https://0pointer.net/blog/fitting-everything-together.html), but it does not enable secure boot and verity by default.
 
 Profiles:
