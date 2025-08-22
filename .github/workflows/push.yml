@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: setup-mkosi
         uses: systemd/mkosi@main
-      - name: build
+      - name: build server
         run: |
           mkosi -d debian -r trixie build
+      - name: build desktop
+        run: |
+          mkosi -d debian -r trixie --profile desktop build
