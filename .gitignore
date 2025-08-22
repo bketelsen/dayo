@@ -1,0 +1,7 @@
+mkosi.local*
+.mkosi-private/
+mkosi.cache/
+mkosi.output/
+mkosi.version
+mkosi.tools/
+mkosi.tools.manifest
