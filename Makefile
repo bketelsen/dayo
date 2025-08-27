@@ -1,23 +1,17 @@
 .PHONY: default
-default: server
+default: images
 
-.PHONY: server
-server:
-ifeq (, $(shell which mkosi))
-	@echo "mkosi couldn't be found, please install it and try again"
-	exit 1
-endif
-	$(shell command -v mkosi) -d debian -r trixie build
+.PHONY: images
+images:
+	mkosi -B
 
-.PHONY: desktop
-desktop:
-ifeq (, $(shell which mkosi))
-	@echo "mkosi couldn't be found, please install it and try again"
-	exit 1
-endif
-	$(shell command -v mkosi) -d debian -r trixie --profile desktop build
-
-.PHONY: clean
 clean:
 	rm -rf mkosi.output
 	rm -rf mkosi.cache
+
+iso:
+	sudo ./scripts/convert-img-to-iso.sh mkosi.output/DayoServerInstaller_202508262004_x86-64.raw
+
+copy:
+	scp mkosi.output/*.efi bjk@10.0.1.47:~/dayo/
+	scp mkosi.output/*.raw bjk@10.0.1.47:~/dayo/
