@@ -84,3 +84,14 @@ todo:
 - [ ] sysupdate
 - [ ] base/server default dhcp setup?
 - [ ] keymap / locale setup
+
+
+### Install systemd@main
+
+```bash
+echo 'deb http://download.opensuse.org/repositories/system:/systemd/Debian_13/ /' | sudo tee /etc/apt/sources.list.d/system:systemd.list
+curl -fsSL https://download.opensuse.org/repositories/system:systemd/Debian_13/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/system_systemd.gpg > /dev/null
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install erofs-utils systemd-boot-tools
+```
