@@ -12,3 +12,7 @@ locale-gen
 # Anyway, this fixes it.
 ln -sf regulatory.db-debian /usr/lib/firmware/regulatory.db
 ln -sf regulatory.db.p7s-debian /usr/lib/firmware/regulatory.db.p7s
+
+if [[ -f /usr/lib/tmpfiles.d/debian.conf ]]; then
+    sed -i '/\/etc\/pam.d/d' /usr/lib/tmpfiles.d/debian.conf
+fi
