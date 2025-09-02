@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   build:
@@ -22,11 +22,14 @@ jobs:
       - name: build server
         run: |
           make
+      - name: list artifacts
+        run: |
+          ls mkosi.output
       - name: Upload Artifact - Server
         uses: actions/upload-artifact@v4
         with:
           name: DayoServer.raw # NOTE: same artifact name
-          path: mkosi.output/DayoServer.raw
+          path: mkosi.output/DayoServer*.raw
       - name: build desktop
         run: |
           make desktop
