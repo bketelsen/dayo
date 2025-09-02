@@ -25,8 +25,13 @@ jobs:
       - name: list artifacts
         run: |
           ls mkosi.output
-      - name: Upload Artifact - Server
+      - name: Upload Artifact - Image
         uses: actions/upload-artifact@v4
         with:
           name: DayoServer.raw # NOTE: same artifact name
-          path: mkosi.output/
+          path: mkosi.output/DayoServer_*.raw
+      - name: Upload Artifact - Usr
+        uses: actions/upload-artifact@v4
+        with:
+          name: DayoServer.usr.raw # NOTE: same artifact name
+          path: mkosi.output/DayoServer_*.usr*.raw
