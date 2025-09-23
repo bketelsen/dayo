@@ -1,19 +1,25 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+
 [Transfer]
 ProtectVersion=%A
+Verify=no
 
 [Source]
-Type=regular-file
-Path=/var/lib/updates/
-MatchPattern=%M_@v.efi
+Type=url-file
+Path=https://extensions.snowlinux.org/extensions/DAYO/
+MatchPattern=%M_@v_%a.efi
 
 [Target]
 Type=regular-file
 Path=/EFI/Linux
 PathRelativeTo=boot
-MatchPattern=%M_@v+@l-@d.efi \
+MatchPattern=%M_@v_%a+@l-@d.efi \
+             %M_@v_%a+@l.efi \
+             %M_@v_%a.efi \
+             %M_@v+@l-@d.efi \
              %M_@v+@l.efi \
              %M_@v.efi
-Mode=0444
+Mode=0600
 TriesLeft=3
 TriesDone=0
 InstancesMax=2

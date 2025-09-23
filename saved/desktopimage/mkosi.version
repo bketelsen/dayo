@@ -1,3 +1,0 @@
-#!/bin/sh
-set -e
-date -u +%Y%m%d%H%M

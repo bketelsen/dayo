@@ -4,3 +4,16 @@ mkosi.cache/
 mkosi.output/
 mkosi.tools/
 mkosi.tools.manifest
+
+mkosi.local/
+mkosi.local.conf
+mkosi.output/
+mkosi.cache/
+mkosi.tools/
+mkosi.tools.manifest
+mkosi.key
+mkosi.crt
+.mkosi-private
+/docs/*/
+.save
+/scripts/tmp.sh

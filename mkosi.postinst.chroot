@@ -1,18 +1,23 @@
-#!/bin/sh
-set -ue
+#!/bin/bash
+# SPDX-License-Identifier: LGPL-2.1-or-later
+set -e
 
-sed -i '/^# C.UTF-8.*/c\C.UTF-8 UTF-8' /etc/locale.gen && \
-sed -i '/^# en_US.UTF-8.*/c\en_US.UTF-8 UTF-8' /etc/locale.gen && \
-sed -i '/^# zh_CN.UTF-8.*/c\zh_CN.UTF-8 UTF-8' /etc/locale.gen && \
-locale-gen
+if command -v authselect >/dev/null; then
+    authselect select local
+    authselect enable-feature with-systemd-homed
+fi
 
-# Avoid update-alternative link.
-# I guess the failure of regulatory.db loading is becuase
-# /etc and /usr is not on the same partition.
-# Anyway, this fixes it.
-ln -sf regulatory.db-debian /usr/lib/firmware/regulatory.db
-ln -sf regulatory.db.p7s-debian /usr/lib/firmware/regulatory.db.p7s
+if [[ -d /etc/pam.d ]]; then
+    find /etc/pam.d -mindepth 1 -exec mv {} /usr/lib/pam.d \;
+    rmdir /etc/pam.d
+fi
 
-if [[ -f /usr/lib/tmpfiles.d/debian.conf ]]; then
-    sed -i '/\/etc\/pam.d/d' /usr/lib/tmpfiles.d/debian.conf
+# Get rid of obsolete stuff in the pam stack.
+find /usr/lib/pam.d/ -mindepth 1 -exec sed --in-place '/pam_shells.so/d' {} \;
+find /usr/lib/pam.d/ -mindepth 1 -exec sed --in-place '/pam_securetty.so/d' {} \;
+
+# Fedora disables the userdb ssh dropin by default, but helpfully leaves it available in
+# the package so that we can just symlink it to a name that will be picked up by systemd-tmpfiles.
+if [[ -f /usr/lib/tmpfiles.d/20-systemd-userdb.conf.example ]]; then
+    ln --symbolic 20-systemd-userdb.conf.example /usr/lib/tmpfiles.d/20-systemd-userdb.conf
 fi

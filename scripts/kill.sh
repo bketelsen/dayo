@@ -3,5 +3,8 @@ set -euo pipefail
 
 # kill and remove the instance
 
-incus stop --force dayo || true
-incus rm dayo || true
+# make the instance_name "snow" plus the variant
+instance_name="dayo-server"
+
+incus stop --force "$instance_name" || true
+incus rm "$instance_name" || true

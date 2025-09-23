@@ -1,5 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 # SPDX-License-Identifier: LGPL-2.1-or-later
-set -ue
+set -e
 
-date +'%Y%m%d%H%M%S'
+date +%Y%m%d%H%M%S
