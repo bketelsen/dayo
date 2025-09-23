@@ -48,6 +48,11 @@ jobs:
           cp $HOME/secrets/mkosi.key .
           chmod 600 ./mkosi.key
           mkosi build --compress-output=yes --dependency=base
+      - name: oras test
+        uses: oras-project/setup-oras@v1
+      - run: |
+          oras version
+          echo $GITHUB_TOKEN | oras login ghcr.io -u bketelsen --password-stdin
       - name: "push main image"
         env:
           PR: ${{ github.event_name == 'pull_request' }}
@@ -391,7 +396,7 @@ jobs:
         env:
           PR: ${{ github.event_name == 'pull_request' }}
           FORCE_REBUILD: ${{ inputs.force-rebuild }}
-          SYSEXTS: 'sysext-incus;'
+          SYSEXTS: "sysext-incus;"
         shell: bash
         run: |
           set -euxo pipefail
@@ -469,7 +474,7 @@ jobs:
         env:
           PR: ${{ github.event_name == 'pull_request' }}
           FORCE_REBUILD: ${{ inputs.force-rebuild }}
-          SYSEXTS: 'sysext-incus;'
+          SYSEXTS: "sysext-incus;"
         shell: bash
         run: |
           set -euxo pipefail
