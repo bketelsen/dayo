@@ -101,9 +101,9 @@ jobs:
 
           cd "mkosi.output"
 
-          echo "Searching for ${TAGNAME}.raw"
+          echo "Searching for ${FILENAME}"
           ls -la .
-          if [[ ! -f ./${TAGNAME}.raw ]]; then
+          if [[ ! -f ./${FILENAME} ]]; then
             echo "No image built. Skipping."
             exit 0
           fi
