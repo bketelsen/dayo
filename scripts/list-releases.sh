@@ -1,5 +1,5 @@
 #!/bin/bash
-url="https://extensions.snowlinux.org/extensions"
+url="https://dayo.snowlinux.org/extensions"
 
 
 echo "Global:"

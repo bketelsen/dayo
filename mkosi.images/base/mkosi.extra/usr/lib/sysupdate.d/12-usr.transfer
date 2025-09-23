@@ -6,7 +6,7 @@ Verify=no
 
 [Source]
 Type=url-file
-Path=https://extensions.snowlinux.org/extensions/DAYO/
+Path=https://dayo.snowlinux.org/extensions/DAYO/
 MatchPattern=%M_@v_%a.usr-%a.@u.raw
 
 [Target]

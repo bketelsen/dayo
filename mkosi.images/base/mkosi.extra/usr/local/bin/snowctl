@@ -6,7 +6,7 @@
 
 set -euo pipefail
 
-url="https://extensions.snowlinux.org/extensions"
+url="https://dayo.snowlinux.org/extensions"
 
 # Function to display usage information
 usage() {
