@@ -52,7 +52,7 @@ jobs:
         uses: oras-project/setup-oras@v1
       - run: |
           oras version
-          echo $GITHUB_TOKEN | oras login ghcr.io -u bketelsen --password-stdin
+          echo $GH_TOKEN | oras login ghcr.io -u bketelsen --password-stdin
       - name: "push main image"
         env:
           PR: ${{ github.event_name == 'pull_request' }}
