@@ -87,10 +87,10 @@ jobs:
           if [[ "${PR}" == "true" ]]; then
             echo "Pull request detected. Skipping release creation for ${TAGNAME}."
             rm -rf  \
-              ./${TAGNAME}.raw.zst \
+              ./${TAGNAME}.raw \
               ./${TAGNAME}.efi \
-              ./${TAGNAME}.esp.raw.zst \
-              ./${TAGNAME}.usr-x86-64.*.raw.zst \
+              ./${TAGNAME}.esp.raw \
+              ./${TAGNAME}.usr-x86-64.*.raw \
               ./inputs \
               ./SHA256SUMS \
               ./notes
@@ -101,9 +101,9 @@ jobs:
 
           cd "mkosi.output"
 
-          echo "Searching for ${TAGNAME}.raw.zst"
+          echo "Searching for ${TAGNAME}.raw"
           ls -la .
-          if [[ ! -f ./${TAGNAME}.raw.zst ]]; then
+          if [[ ! -f ./${TAGNAME}.raw ]]; then
             echo "No image built. Skipping."
             exit 0
           fi
