@@ -22,6 +22,8 @@ on:
 # Needed to allow creating a release
 permissions:
   contents: write
+  packages: write
+  id-token: write
 
 # Prevent multiple workflow runs from racing to ensure that pushes are made
 # sequentialy for the main branch. Also cancel in progress workflow runs.
