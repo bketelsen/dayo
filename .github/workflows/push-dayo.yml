@@ -47,7 +47,7 @@ jobs:
           cp $HOME/secrets/mkosi.crt .
           cp $HOME/secrets/mkosi.key .
           chmod 600 ./mkosi.key
-          mkosi build --compress-output=yes --dependency=base
+          mkosi build --compress-output=yes
       - name: "push main image"
         env:
           PR: ${{ github.event_name == 'pull_request' }}
@@ -230,9 +230,6 @@ jobs:
           # since we skipped building the sysexts when building the main image,
           # we need to build the sysext now
           echo "Building sysext: ${SYSEXT}"
-          mkosi build --profile=sysext-only --dependency=${SYSEXT}
-
-
 
           # Check if we are asked to force a rebuild
           if [ -n ${FORCE_REBUILD+x} ]; then
@@ -335,16 +332,16 @@ jobs:
           # This is BASE now
           TAGNAME="${SYSEXT}_${VERSION}_${ARCH}"
 
-          if [[ ! -f ./${BASE}.raw ]]; then
+          if [[ ! -f ./${BASE}.raw.zst ]]; then
             echo "No sysext built. Skipping."
             exit 0
           fi
 
 
           # rename the sysext to match the expected naming convention for releases
-          mv ./${BASE}.raw ./${TAGNAME}.raw
-          echo "Renamed ./${BASE}.raw to ./${TAGNAME}.raw"
-          sha256sum ${TAGNAME}.raw > ./SHA256SUMS
+          mv ./${BASE}.raw.zst ./${TAGNAME}.raw.zst
+          echo "Renamed ./${BASE}.raw.zst to ./${TAGNAME}.raw.zst"
+          sha256sum ${TAGNAME}.raw.zst > ./SHA256SUMS
 
 
 
@@ -379,10 +376,10 @@ jobs:
             --notes-file notes \
             "${TAGNAME}" \
             --latest=false \
-            ./${TAGNAME}.raw ./SHA256SUMS ./${SYSEXT}.inputs
+            ./${TAGNAME}.raw.zst ./SHA256SUMS ./${SYSEXT}.inputs
 
           rm -rf  \
-            ./${TAGNAME}.raw \
+            ./${TAGNAME}.raw.zst \
             ./${SYSEXT}.inputs \
             ./SHA256SUMS \
             ./notes
@@ -391,7 +388,7 @@ jobs:
         env:
           PR: ${{ github.event_name == 'pull_request' }}
           FORCE_REBUILD: ${{ inputs.force-rebuild }}
-          SYSEXTS: "sysext-incus;"
+          SYSEXTS: 'sysext-incus;'
         shell: bash
         run: |
           set -euxo pipefail
@@ -469,7 +466,7 @@ jobs:
         env:
           PR: ${{ github.event_name == 'pull_request' }}
           FORCE_REBUILD: ${{ inputs.force-rebuild }}
-          SYSEXTS: "sysext-incus;"
+          SYSEXTS: 'sysext-incus;'
         shell: bash
         run: |
           set -euxo pipefail
